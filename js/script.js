@@ -6,7 +6,7 @@ const gitUserInfo = async function () {
     const data = await userInfo.json();
 
     displayUserInfo(data);
-    console.log(data);
+    console.log(data); //This is what I dont understand
 };
 
 gitUserInfo();
@@ -15,8 +15,11 @@ const displayUserInfo = function (data) {
     const div = document.createElement("div");
     div.classList.add("user-info");
     div.innerHTML = `
+    
+    **the stuff in the brackets is the info im trying to get but cant understand how to get it**
+    
     <figure>
-      <img alt="user avatar" src=${data.avatar_url} />
+      <img alt="user avatar" src=${data.avatar_url} /> 
     </figure>
     <div>
       <p><strong>Name:</strong> ${data.name}</p>
